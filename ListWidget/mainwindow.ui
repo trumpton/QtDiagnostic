@@ -18,8 +18,34 @@
     <item>
      <widget class="QTabWidget" name="tabWidget">
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>Page</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout_4">
+        <item>
+         <widget class="QPlainTextEdit" name="plainTextEdit_2">
+          <property name="plainText">
+           <string>This demo program shows a feature which is inconsistent between visual and braille display output.
+
+Using NVDA 2019.1.1
+And QT 5.10.1
+
+Select 'Page' Tab, then Test Menu 1.
+Focus moves to Tab 2 and plaintextedit text is displayed on the screen and Braille display.
+
+Select 'Page' Tab, then Test Menu 2.
+Focus moves to Tab 2, and the text of the plaintextedit is spoken, but the braille display shows the second entry in the list (on Tab 1), rather than the text of the plaintextedit.
+
+Now select 'Page' Tab, then Test Menu 2 again.  This time, Focus moves to Tab 2, and the braille display correctly shows the text in the plaintextedit.
+</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
       <widget class="QWidget" name="tab_1">
        <attribute name="title">
         <string>Tab 1</string>
@@ -50,7 +76,7 @@
      <x>0</x>
      <y>0</y>
      <width>846</width>
-     <height>23</height>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu_Test">
@@ -59,6 +85,7 @@
     </property>
     <addaction name="actionTest_1"/>
     <addaction name="actionTest_2"/>
+    <addaction name="actionTest_3"/>
    </widget>
    <addaction name="menu_Test"/>
   </widget>
@@ -73,12 +100,17 @@
   <widget class="QStatusBar" name="statusBar"/>
   <action name="actionTest_1">
    <property name="text">
-    <string>Test &amp;1</string>
+    <string>&amp;1 - Switch to PlainTextEdit</string>
    </property>
   </action>
   <action name="actionTest_2">
    <property name="text">
-    <string>Test &amp;2</string>
+    <string>&amp;2 - Switch to PlainTextEdit and Select Item2 in List</string>
+   </property>
+  </action>
+  <action name="actionTest_3">
+   <property name="text">
+    <string>&amp;3 - Swtich to PlainTextEdit and Select Item3 in List</string>
    </property>
   </action>
  </widget>
